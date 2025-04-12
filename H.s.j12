@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Blogger Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .blog-post {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    .blog-post h2 {
+      margin-top: 0;
+    }
+
+    .signup-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+      margin-top: 30px;
+    }
+
+    .signup-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .signup-form button {
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Blog</h1>
+    <p>Contact: 03476841038</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#signup">Sign Up</a>
+    <a href="#blogs">Blogs</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="blogs">
+      <div class="blog-post">
+        <h2>Blog Post 1: Web Development Basics</h2>
+        <p>Web development is all about building and maintaining websites. It includes HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="blog-post">
+        <h2>Blog Post 2: Why Blogging is Important</h2>
+        <p>Blogging helps you share your thoughts with the world, build an audience, and improve your writing skills.</p>
+      </div>
+    </section>
+
+    <section id="signup" class="signup-form">
+      <h2>Sign Up for Updates</h2>
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" />
+      <button onclick="signUp()">Sign Up</button>
+      <p id="signup-message" style="color: green;"></p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 My Blogger Website
+  </footer>
+
+  <script>
+    function signUp() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      if(name && email) {
+        document.getElementById("signup-message").innerText = "Thank you for signing up, " + name + "!";
+      } else {
+        alert("Please fill in all fields.");
+      }
+    }
+  </script>
+
+</body>
+</html>
